@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+user = User.new(name: "Mike", email: "mike@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/52894341?v=4")
+user.save
+
+user = User.new(name: "Ed", email: "Ed@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/97701763?v=4")
+user.save
+
+user = User.new(name: "Josh", email: "josh@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/125905920?v=4")
+user.save
+
+user = User.new(name: "Anna", email: "anna@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/121132842?v=4")
+user.save
+
+room = Room.new(user_id: 1, address: "123 Hollywood Blvd", city: "LA", state: "CA", price: 300, description: "Come stay at Jason Nesmith's home set in the idyllic Hollywood Hills. Watch out for foreign invaders", home_type: "Mansion Home", room_type: "Private", total_occupancy: 12, total_bedrooms: 8, total_bathrooms: 4)
+room.save
+
+room = Room.new(user_id: 2, address: "190 W Sixth Street", city: "Boston", state: "MA", price: 100, description: "Have you ever met a Will Hunting you didn't like? Now you have the chance to stay in his three flat! Located right in the heart of Boston", home_type: "Apartment", room_type: "Shared", total_occupancy: 3, total_bedrooms: 2, total_bathrooms: 1)
+room.save
+
+room = Room.new(user_id: 3, address: "6409 Wilbur Drive", city: "Austin", state: "TX", price: 200, description: "You won't be confused, but you will be dazed at Carl's cool house. Located on the beautiful streets of Austin!", home_type: "Single-Family Home", room_type: "Private", total_occupancy: 12, total_bedrooms: 4, total_bathrooms: 3)
+room.save
+
+room = Room.new(user_id: 4, address: "122 Callahan Drive", city: "Sandusky", state: "OH", price: 250, description: "Want to live in the coolest house in the middle of nowhere? Come visit Callahan Auto Parts and hangout with Tomy", home_type: "Mansion", room_type: "Private", total_occupancy: 12, total_bedrooms: 8, total_bathrooms: 6)
+room.save
