@@ -1,13 +1,13 @@
-user = User.new(name: "Mike", email: "mike@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/52894341?v=4")
+user = User.new(name: "Mike", email: "mike@test.com", password: "password", password_confirmation: "password", image: "https://avatars.githubusercontent.com/u/52894341?v=4")
 user.save
 
-user = User.new(name: "Ed", email: "Ed@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/97701763?v=4")
+user = User.new(name: "Ed", email: "Ed@test.com", password: "password", password_confirmation: "password", image: "https://avatars.githubusercontent.com/u/97701763?v=4")
 user.save
 
-user = User.new(name: "Josh", email: "josh@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/125905920?v=4")
+user = User.new(name: "Josh", email: "josh@test.com", password: "password", password_confirmation: "password", image: "https://avatars.githubusercontent.com/u/125905920?v=4")
 user.save
 
-user = User.new(name: "Anna", email: "anna@test.com", password_digest: "password", image: "https://avatars.githubusercontent.com/u/121132842?v=4")
+user = User.new(name: "Anna", email: "anna@test.com", password: "password", password_confirmation: "password", image: "https://avatars.githubusercontent.com/u/121132842?v=4")
 user.save
 
 room = Room.new(user_id: 1, address: "123 Hollywood Blvd", city: "LA", state: "CA", price: 300, description: "Come stay at Jason Nesmith's home set in the idyllic Hollywood Hills. Watch out for foreign invaders", home_type: "Mansion Home", room_type: "Private", total_occupancy: 12, total_bedrooms: 8, total_bathrooms: 4)
@@ -33,3 +33,5 @@ roomimage.save
 
 roomimage = RoomImage.new(room_id: 4, url: "https://m.media-amazon.com/images/M/MV5BNDg1MDBiNTMtNjVmYy00YzgzLWIyZTItNjU0ZWEzNjBkMmU0XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg")
 roomimage.save
+
+reservation = Reservation.new(user_id: , room_id)
