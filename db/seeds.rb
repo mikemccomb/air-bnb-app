@@ -33,5 +33,3 @@ roomimage.save
 
 roomimage = RoomImage.new(room_id: 4, url: "https://m.media-amazon.com/images/M/MV5BNDg1MDBiNTMtNjVmYy00YzgzLWIyZTItNjU0ZWEzNjBkMmU0XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg")
 roomimage.save
-
-reservation = Reservation.new(user_id: , room_id)
