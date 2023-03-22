@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  # Ed was here
+  # login routes
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
 
-  # Anna was not here.
+  # sessions routes
+  get "/login" => "sessions#new"
+  post "/sessions" => "sessions#create"
+  get "/logout" => "sessions#destroy"
 end
