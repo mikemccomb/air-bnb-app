@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  # Trivial change
+  def hello
+  end
 end
