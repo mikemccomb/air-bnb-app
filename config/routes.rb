@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # Ed was here
-
-  # Anna was not here.
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
 end
