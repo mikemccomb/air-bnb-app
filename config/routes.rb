@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  #Rooms
+  get "/rooms" => "rooms#index"
+  get "/rooms/:id" => "rooms#show"
+
   # login routes
   get "/signup" => "users#new"
   post "/users" => "users#create"
