@@ -1,0 +1,18 @@
+<h1>Reserve this room</h1>
+<%= form_with method: "post", url: "/reservations" do |form| %>
+  <div>
+    <p>Your Name: <%= current_user.name %></p>
+    <p>Property Location: CITY, STATE</p>
+    <p><%= form.label :start_date, "Check-in Date:" %>
+    <%= form.date_field :start_date %></p>
+    <p><%= form.label :end_date, "Check-out Date:" %>
+    <%= form.date_field :end_date %></p>
+    <p> Price per night: VAR</p>
+    <p><strong>Total Cost:</strong> CALCULATE</p>
+  </div>
+  <div>
+    <%= form.submit "Complete Reservation" %>
+  </div>
+
+  <!-- After confirmation, show a link to leave a review -->
+<% end%>
