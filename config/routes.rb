@@ -18,12 +18,6 @@ Rails.application.routes.draw do
   get "/reservations" => "reservations#new"
   post "/reservations" => "reservations#create"
 
-
-
-
-
-
-
   # reviews routes
   resources :reviews
 end
