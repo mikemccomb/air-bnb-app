@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root "sessions#new"
   #Rooms
   get "/rooms" => "rooms#index"
   get "/rooms/:id" => "rooms#show"
