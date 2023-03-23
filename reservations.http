@@ -1,0 +1,22 @@
+# Create Reservation
+POST http://localhost:3000/reservations
+
+{
+  "user_id": 1,
+  "room_id": 1,
+  "start_date": "03/24/23",
+  "end_date": "04/01/23",
+  "price": 100,
+  "total": 800
+}
+
+###
+
+# Generate user session
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "mike@test.com",
+  "password": "password"
+}

@@ -1,6 +1,4 @@
-<h1>Reserve this room</h1>
-
-<%= form_with method: "post", url: "/reservations" do |form| %>
+<% form_with model: reservation do |form| %>
   <div>
     <p>Your Name: <%= current_user.name %></p>
     <p>Property Location: Room City, Room State</p>
@@ -15,4 +13,5 @@
     <%= form.submit "Complete Reservation" %>
   </div>
 
-<% end%> 
+  <!-- After confirmation, show a link to leave a review -->
+<% end%>

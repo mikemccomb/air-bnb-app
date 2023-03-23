@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   #reservations routes
   get "/reservations" => "reservations#new"
+  post "/reservations" => "reservations#create"
 end
