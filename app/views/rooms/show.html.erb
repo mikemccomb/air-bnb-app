@@ -31,7 +31,8 @@
 
 <%Reservation.all.each do |reservation|%>
   <%if reservation.room_id == @room.id%>
-    <p><%=reservation.reviews%></p>
+    <p>Comment: <%=reservation.reviews.first.comment%></p>
+    <p>Rating: <%=reservation.reviews.first.rating%></p>
   <%end%>
 <%end%>
 
