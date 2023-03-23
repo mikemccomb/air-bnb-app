@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
 
   #reservations routes
+
   get "/reservations" => "reservations#new"
   post "/reservations" => "reservations#create"
 end

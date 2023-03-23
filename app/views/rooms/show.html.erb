@@ -15,4 +15,4 @@
 
 <!--Click to go back to (index action)-->
 <p><a href="/rooms/">Back to All Rooms</p></a>
-<p><a href="/reservations/">Make a reservation</a></p>
+<%= link_to "Make a reservation", reservations_path, params: {room_id: @room.id} %>
