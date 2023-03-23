@@ -1,0 +1,11 @@
+<h1>All Rooms</h1>
+
+<% @rooms.each do |room|%>
+  <h3><%=room.city%><h3>
+  <h3><%=room.state%><h3>
+  <p><%=room.description%><p>
+  <p>Price: $<%=room.price%></p>
+
+  <!--Click to go to show action-->
+  <p><a href="/rooms/<%=room.id%>">More Details</p></a>
+<%end%>
