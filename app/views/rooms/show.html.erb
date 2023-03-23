@@ -1,18 +1,41 @@
 <h1>Room Details</h1>
 
+<!---Image of Room-->
+<img src="<%=RoomImage.find(@room.id).url%>" width=300 height=auto>
+
+<!--Basic Description of Rom-->
 <h3><%=@room.city%><h3>
 <h3><%=@room.state%><h3>
 <p><%=@room.description%><p>
 <p>$<%=@room.price%> per night<p>
+
+<!--Room Details-->
 <p>Home Type: <%=@room.home_type%><p>
 <p>Room Type: <%=@room.room_type%><p>
 <p>Occupancy: <%=@room.total_occupancy%><p>
 <p>Bedrooms: <%=@room.total_bedrooms%><p>
 <p>Bathrooms: <%=@room.total_bathrooms%><p>
 
-<!---Add Section for Images of Room->
-
 
 <!--Click to go back to (index action)-->
-<p><a href="/rooms/">Back to All Rooms</p></a>
-<%= link_to "Make a reservation", reservations_path, params: {room_id: @room.id} %>
+<p><a href="/rooms/">Back to All Rooms</a></p>
+
+<!--Display link conditional if user is login in or not-->
+<%if current_user%>
+  <p><a href="/reservations">Reserve</a><p>
+<%else%>
+  <p><a href="/login">Login or Sign Up to Reserve</a></P>
+<%end%>
+
+<h1>Reviews</h1>
+
+<%Reservation.all.each do |reservation|%>
+  <%if reservation.room_id == @room.id%>
+    <p>Comment: <%=reservation.reviews.first.comment%></p>
+    <p>Rating: <%=reservation.reviews.first.rating%></p>
+  <%end%>
+<%end%>
+
+
+
+
