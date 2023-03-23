@@ -1,5 +1,7 @@
 <h1>Room Details</h1>
 
+<!---Image of Room-->
+<img src="<%=RoomImage.find(@room.id).url%>" width=300 height=auto>
 <h3><%=@room.city%><h3>
 <h3><%=@room.state%><h3>
 <p><%=@room.description%><p>
@@ -10,8 +12,9 @@
 <p>Bedrooms: <%=@room.total_bedrooms%><p>
 <p>Bathrooms: <%=@room.total_bathrooms%><p>
 
-<!---Add Section for Images of Room->
 
 
 <!--Click to go back to (index action)-->
 <p><a href="/rooms/">Back to All Rooms</p></a>
+
+<!--Add conditional for if user is logged in they can click to go to reserve page-->
