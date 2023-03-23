@@ -2,8 +2,6 @@
 
 <%= form_with method: "post", url: "/reservations" do |form| %>
   <div>
-    <p>Your Name: <%= current_user.name %></p>
-    <p>Property Location: Room City, Room State</p>
     <p><%= form.label :start_date, "Check-in Date:" %>
     <%= form.date_field :start_date %></p>
     <p><%= form.label :end_date, "Check-out Date:" %>

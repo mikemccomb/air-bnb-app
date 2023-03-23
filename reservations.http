@@ -14,7 +14,6 @@ POST http://localhost:3000/reservations
 
 # Generate user session
 POST http://localhost:3000/sessions
-Content-Type: application/json
 
 {
   "email": "mike@test.com",
