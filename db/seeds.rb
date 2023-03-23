@@ -33,3 +33,20 @@ roomimage.save
 
 roomimage = RoomImage.new(room_id: 4, url: "https://m.media-amazon.com/images/M/MV5BNDg1MDBiNTMtNjVmYy00YzgzLWIyZTItNjU0ZWEzNjBkMmU0XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg")
 roomimage.save
+
+reservation = Reservation.create(user_id: 1, room_id: 1, start_date: "01/01/23", end_date: "01/20/23", price: 300, total: 6000)
+
+reservation = Reservation.create(user_id: 2, room_id: 2, start_date: "01/01/23", end_date: "01/20/23", price: 100, total: 2000)
+
+reservation = Reservation.create(user_id: 3, room_id: 3, start_date: "01/01/23", end_date: "01/20/23", price: 200, total: 4000)
+
+reservation = Reservation.create(user_id: 4, room_id: 4, start_date: "01/01/23", end_date: "01/20/23", price: 250, total: 5000)
+
+review = Review.create(reservation_id: 1, rating: 5, comment: "Gorgeous, but we were invaded by aliens during our stay.")
+
+review = Review.create(reservation_id: 2, rating: 3, comment: "Pretty okay.")
+
+review = Review.create(reservation_id: 3, rating: 1, comment: "It was good for what we wanted.")
+
+review = Review.create(reservation_id: 4, rating: 4, comment: "Classic, I love Sandusky, OH.")
+
