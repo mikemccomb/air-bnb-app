@@ -1,10 +1,14 @@
 <h1>All Rooms</h1>
 
 <% @rooms.each do |room|%>
+  <!--Image of Room-->
+  <img src="<%=RoomImage.find(room.id).url%>" width=300 height=auto>
+
+  <!--Basic Description of Room-->
   <h3><%=room.city%><h3>
   <h3><%=room.state%><h3>
   <p><%=room.description%><p>
-  <p>Price: $<%=room.price%></p>
+  <p><%=room.price%> per night<p>
 
   <!--Click to go to show action-->
   <p><a href="/rooms/<%=room.id%>">More Details</p></a>
