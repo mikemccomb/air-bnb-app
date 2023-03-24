@@ -14,7 +14,9 @@
 <div class="mx-auto" style="width: 200px;">
 <div class="mt-auto" style="height: 100px;">
 </div>
-<h1>New Review</h1>
+<h2>New 
+<small class="text-muted">Review</small>
+</h2>
 
 <%= form_with method: "post", url: "/reviews" do |form| %>
 
@@ -33,7 +35,8 @@
   </div>
 
   <div>
-    <%= form.submit "Submit Review (it better be a good one)" %>
+    <%= form.submit "Submit Review (it better be good)", class: "btn btn-outline-secondary" %>
+
   </div>
   </div>
   </div>
