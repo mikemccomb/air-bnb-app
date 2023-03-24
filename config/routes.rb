@@ -13,12 +13,10 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
+  #reservations routes
 
-
-
-
-
-
+  get "/reservations" => "reservations#new"
+  post "/reservations" => "reservations#create"
 
   # reviews routes
   resources :reviews
