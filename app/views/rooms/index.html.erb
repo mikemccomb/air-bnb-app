@@ -1,31 +1,28 @@
 <h1>All Rooms</h1>
-
 <!--If time allows add user filter for city, state, price-->
 
 
 <% @rooms.each do |room|%>
 
   <!--Basic Description of Room-->
-  <div class="container" style="border: solid light-grey; border-radius: 10px">
-  <img src="<%=RoomImage.find(room.id).url%>" width=100% height=auto>
-    <div class="row">
-      <div class="col">
-        <p><%=room.city%>, <%=room.state%><p>
-      </div>
-      <div class="col">
-        <p>Price: $<%=room.price%> per night<p>
+  <a href="/rooms/<%=room.id%>">
+    <div class="container" style="background-color: lightgrey; border-radius: 10px">
+    <img src="<%=RoomImage.find(room.id).url%>" width=100% height=auto>
+      <div class="row">
+        <div class="col">
+          <p><%=room.city%>, <%=room.state%><p>
+        </div>
+        <div class="col">
+          <p>Price: $<%=room.price%> per night<p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 
   <div class="container">
     <div class="row">
       <div class="col-8">
         <p><%=room.description%><p>
-      </div>
-      <div class="col-4">
-        <!--Click to go to show action-->
-        <p><a href="/rooms/<%=room.id%>">More Details</p></a>
       </div>
     </div>
   </div>
