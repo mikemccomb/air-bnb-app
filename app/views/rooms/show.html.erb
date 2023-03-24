@@ -4,10 +4,11 @@
 <img src="<%=RoomImage.find(@room.id).url%>" width=300 height=auto>
 
 <!--Basic Description of Rom-->
-<h3><%=@room.city%><h3>
-<h3><%=@room.state%><h3>
+<h3>City: <%=@room.city%><h3>
+<h3>State: <%=@room.state%><h3>
+<p>Description</p>
 <p><%=@room.description%><p>
-<p>$<%=@room.price%> per night<p>
+<p>Price: $<%=@room.price%> per night<p>
 
 <!--Room Details-->
 <p>Home Type: <%=@room.home_type%><p>
