@@ -13,10 +13,10 @@
     <%= form.hidden_field :price, :value => params[:price]%>
     </p>
     <p><%= form.label :nights, "Nights:" %>
-    <%= Time.now.strftime("%Y-%m-%d") %>
+    <%= "Check-out minus Check-in" %>
     </p>
     <p><%= form.label :total, "Total cost:" %>
-    <%="$Price * Nights" %>
+    <%="$" + params[:price] + " * Nights" %>
     <%= form.hidden_field :total, :value => 0 %>
     </p>
   </div>
