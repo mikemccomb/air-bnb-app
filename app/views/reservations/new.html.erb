@@ -3,11 +3,22 @@
 <%= form_with method: "post", url: "/reservations" do |form| %>
   <div>
     <p><%= form.label :start_date, "Check-in Date:" %>
-    <%= form.date_field :start_date %></p>
+    <%= form.date_field :start_date, :value => Time.now.strftime("%Y-%m-%d") %></p>
     <p><%= form.label :end_date, "Check-out Date:" %>
-    <%= form.date_field :end_date %></p>
-    <p> Price per night: VAR (Rooms Table) </p>
-    <p><strong>Total Cost:</strong> CALCULATE (Price * # Nights)</p>
+    <%= form.date_field :end_date, :value => Date.tomorrow.strftime("%Y-%m-%d") %></p>
+    <p> <%= form.hidden_field :room_id, :value => params[:room_id], :readonly => true %>
+    </p>
+    <p><%= form.label :price, "Price per night:" %>
+    <%="$" + params[:price]%>
+    <%= form.hidden_field :price, :value => params[:price]%>
+    </p>
+    <p><%= form.label :nights, "Nights:" %>
+    <%= "Check-out minus Check-in" %>
+    </p>
+    <p><%= form.label :total, "Total cost:" %>
+    <%="$" + params[:price] + " * Nights" %>
+    <%= form.hidden_field :total, :value => 0 %>
+    </p>
   </div>
   <div>
     <%= form.submit "Complete Reservation" %>
@@ -16,8 +27,6 @@
 <% end%> 
 
 <!-- 
-  # Fix room_id
-  # Fix Price
   # Calculate total
   # Where to go after clicking submit
   # Link to leave review
