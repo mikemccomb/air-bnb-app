@@ -6,8 +6,13 @@
     <%= form.date_field :start_date %></p>
     <p><%= form.label :end_date, "Check-out Date:" %>
     <%= form.date_field :end_date %></p>
-    <p> Price per night: VAR (Rooms Table) </p>
-    <p><strong>Total Cost:</strong> CALCULATE (Price * # Nights)</p>
+    <p><%= form.label :room_id, "Room ID:" %>
+    <%= params[:room_id] %>
+    </p>
+    <p><%= form.label :price, "Price per night:" %>
+    <%= params[:price] %>
+    </p>
+    <p><strong>Total Cost:</strong> <%= reservation.total_cost%></p>
   </div>
   <div>
     <%= form.submit "Complete Reservation" %>

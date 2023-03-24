@@ -22,7 +22,8 @@
 
 <!--Display link conditional if user is login in or not-->
 <%if current_user%>
-  <p><a href="/reservations">Reserve</a><p>
+  <p><%= link_to "Make a reservation", reservations_path(room_id: @room.id, price: @room.price) %></p>
+  <!--<p><a href="/reservations">Reserve</a><p>-->
 <%else%>
   <p><a href="/login">Login or Sign Up to Reserve</a></P>
 <%end%>

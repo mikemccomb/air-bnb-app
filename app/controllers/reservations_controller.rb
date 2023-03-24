@@ -8,6 +8,12 @@ class ReservationsController < ApplicationController
   #   @reservation = Reservation.find(params[:id])
   # end
 
+  def total_cost
+    nights = reservation.end_date - reservation.start_date
+    total = nights * room.price
+    return total
+  end
+
   def new
     @reservation = Reservation.new
   end
@@ -18,8 +24,8 @@ class ReservationsController < ApplicationController
       room_id: params[:room_id],
       start_date: params[:start_date],
       end_date: params[:end_date],
-      price: 100,
-      total: 800,
+      price: params[:price],
+      total: total_cost,
     )
 
     if @reservation.save
