@@ -8,8 +8,8 @@
   </head>
   <body>
     <%= form_with method: "post", url: "/sessions" do |form| %>
-    
-    <div class="card text-center" style="width: 100%; height: 100%;">
+
+    <div class="card text-center" style="width: 100%; height: 50%;">
       <img src="https://mma.prnewswire.com/media/1121685/Airbnb_Logo.jpg?p=facebook" class="card-img-top" alt="...">
       <div class="card-body">
       
@@ -22,13 +22,13 @@
           <%= form.password_field :password %>
         </div>
         <div>
-          <%= form.submit "Sign In", class: "btn btn-danger btn-block mb-4 center" %>
+          <%= form.submit "Sign In", class: "btn btn-danger btn-lg" %>
         </div>
       <% end%>
 
       <p><b> If you have not make an account, click the link below to sign up </b></p>
         <div>
-          <%= link_to "Signup", signup_path, class: "btn btn-warning btn-block mb-4"%>
+          <%= link_to "Signup", signup_path, class: "btn btn-warning btn-lg"%>
         </div> 
     
     
