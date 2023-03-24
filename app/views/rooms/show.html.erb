@@ -35,11 +35,20 @@
 </div>
 
 <!--Room Details-->
-<p>Home Type: <%=@room.home_type%><p>
-<p>Room Type: <%=@room.room_type%><p>
-<p>Occupancy: <%=@room.total_occupancy%><p>
-<p>Bedrooms: <%=@room.total_bedrooms%><p>
-<p>Bathrooms: <%=@room.total_bathrooms%><p>
+<div class="row">
+  <div class="col-sm-9">
+    <p>Home Type: <%=@room.home_type%> Room Type: <%=@room.room_type%> <p>
+    <div class="row">
+      <div class="col-8 col-sm-6">
+        <p>Occupancy: <%=@room.total_occupancy%><p>
+        <p>Bedrooms: <%=@room.total_bedrooms%><p>
+      </div>
+      <div class="col-4 col-sm-6">
+        <p>Bathrooms: <%=@room.total_bathrooms%><p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!--Click to go back to (index action)-->
